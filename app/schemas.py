@@ -65,3 +65,9 @@ class StructureResponse(BaseModel):
     relations: list[Relation] = Field(default_factory=list)
     generated_wikitext: str | None = None
     debug: DebugInfo | None = None
+
+
+class UnstructuredArticleSample(BaseModel):
+    title: str
+    text: str
+    label: str
